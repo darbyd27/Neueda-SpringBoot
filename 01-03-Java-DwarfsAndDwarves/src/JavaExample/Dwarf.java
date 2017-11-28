@@ -27,9 +27,6 @@ public class Dwarf {
 		public void setImage(String image) {
 			this.image = image;
 		}
-		
-
-
 
 	}//Class Dwarf End
 	

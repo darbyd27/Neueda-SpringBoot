@@ -8,8 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import uk.ac.belfastmet.dwarfs.domain.Dwarf;
-import uk.ac.belfastmet.dwarfs.service.DwarfService;
+import Building.service.BuildingService;
+import Building.domain.Building;
+import Building.service.BuildingService;
 
 
 @Controller
@@ -24,10 +25,12 @@ public class FloorController {
 	{
 		model.addAttribute("pageTitle","Floor!");
 		this.buildingService = new BuildingService();
-		model.addAttribute("buildings", this.buildingService.getFloorBuildings());
+		model.addAttribute("buildings", this.buildingService.getfloorBuildings());
 		return "floorPage";
 	}
 
 
+
+	
 	
 }

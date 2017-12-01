@@ -32,7 +32,7 @@
 				<td th:text="${building.name}"></td>
 				<td th:text="${building.label}"></td>				
 				<td th:text="${building.value}"></td>
-				<td><img src ="../static/Floor/1.jpg" th:src="@{/} + ${building.image}" width="250" height="150" /></td>
+				<td><img th:src="@{/} + ${building.image}" width="250" height="150" /></td>
 			</tr>
 		</tbody>
 	</table>

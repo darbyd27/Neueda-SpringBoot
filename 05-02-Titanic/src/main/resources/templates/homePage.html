@@ -7,14 +7,37 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 		<title th:text="${pagetitle}">Generic Page Title</title>
 	</head>
-
+	
 	<body>
 		<nav th:replace="layouts/nav :: navFragment">
 		</nav>
-
+	
 		<div class="jumbotron text-center">
-		<h1>Titanic</h1>
+			<h1>Titanic</h1>
+			<a class="btn btn-primary" href="/passenger/add" role="add">Add</a>
+		</div>
+		<br />
+			
+		<div class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+					<th>Name</th>
+					<th>Further details</th>
+					</tr>
+				</thead>
+			
+				<tbody>
+					<tr th:each="passenger : ${passengers}">
+					<td th:text="${passenger.name}"></td>
+					
+					<td>
+					<a class="btn btn-primary" href="#" th:href="@{passenger/view/} + ${passenger.passengerid}">View</a> 
+					
+					</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
-
 </html>

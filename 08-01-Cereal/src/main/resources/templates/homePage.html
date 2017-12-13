@@ -11,10 +11,37 @@
 	<body>
 		<nav th:replace="layouts/nav :: navFragment">
 		</nav>
-
+	
 		<div class="jumbotron text-center">
-		<h1>Cereal</h1>
+			<h1>Breakfast Cereals</h1>
+			<h6>Nutritional information about various breakfast cereals</h6>
+			<a class="btn btn-primary" href="/cereal/add" role="add">Add</a>
+		</div>
+		<br />
+			
+		<div class="container">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+
+					<th>Manufacturer</th>
+					<th>Cereal</th>
+					<th>Further details</th>
+					</tr>
+				</thead>
+			
+				<tbody>
+					<tr th:each="cereal : ${cereals}">
+					<td th:text="${cereal.manufacturer}"></td>
+					<td th:text="${cereal.name}"></td>
+					<td>
+					<a class="btn btn-primary" href="#" th:href="@{cereal/view/} + ${cereal.cerealId}">View</a> 
+					<a class="btn btn-primary" href="#" th:href="@{cereal/edit/} + ${cereal.cerealId}">Edit</a>
+					<a class="btn btn-primary" href="#" th:href="@{cereal/delete/} + ${cereal.cerealId}">Delete</a>
+					</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
-
 </html>

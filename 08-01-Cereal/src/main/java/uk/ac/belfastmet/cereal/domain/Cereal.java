@@ -1,158 +1,147 @@
 package uk.ac.belfastmet.cereal.domain;
-
+ 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
-@Entity
-public class Cereal
-{
+ @Entity
+ public class Cereal
+ {
+ 	@Id
+ 	@GeneratedValue
+ 	private Integer cerealId;
 
-	
+	@NotEmpty
+ 	private String manufacturer;
+	@NotEmpty
+ 	private String name;
+ 	private Integer energy;
+ 	private Integer calories;
+ 	private Double protein;
+ 	private Double carbohydrate;
+ 	private Double sugars;
+ 	private Double fat;
+ 	private Double saturates;
+ 	private Double fibre;
+ 	private String sodium;
+ 	private String salt;
+ 	private Double iron;
 
-		@Id
-		@GeneratedValue
-		private Integer cerealId;
-		
-		@NotEmpty
-		private String manufacturer;
-		
-		@NotEmpty
-		private String name;
-		
+ 	public Cereal() {
+ 		super();
+ 	}
 
-		private Integer energy;
-		private Integer calories;
-		private String protein;
-		private String carbohydrate;
-		private String sugars;
-		private String fat;
-		private String saturates;
-		private String fibre;
-		private String sodium;
-		private String salt;
-		private String iron;
-		
-		public Cereal() {
-			super();
-		}
+ 	public Integer getCerealId() {
+ 		return cerealId;
+ 	}
 
-		public Integer getCerealId() {
-			return cerealId;
-		}
+ 	public void setCerealId(Integer cerealId) {
+ 		this.cerealId = cerealId;
+ 	}
+ 	
+ 	public String getManufacturer() {
+ 		return manufacturer;
+ 	}
 
-		public void setCerealId(Integer cerealId) {
-			this.cerealId = cerealId;
-		}
+ 	public void setManufacturer(String manufacturer) {
+ 		this.manufacturer = manufacturer;
+ 	}
 
-		public String getManufacturer() {
-			return manufacturer;
-		}
+ 	public String getName() {
+ 		return name;
+ 	}
 
-		public void setManufacturer(String manufacturer) {
-			this.manufacturer = manufacturer;
-		}
+ 	public void setName(String name) {
+ 		this.name = name;
+ 	}
 
-		public String getName() {
-			return name;
-		}
+ 	public Integer getEnergy() {
+ 		return energy;
+ 	}
 
-		public void setName(String name) {
-			this.name = name;
-		}
+ 	public void setEnergy(Integer energy) {
+ 		this.energy = energy;
+ 	}
 
-		public Integer getEnergy() {
-			return energy;
-		}
+ 	public Integer getCalories() {
+ 		return calories;
+ 	}
 
-		public void setEnergy(Integer energy) {
-			this.energy = energy;
-		}
+ 	public void setCalories(Integer calories) {
+ 		this.calories = calories;
+ 	}
 
-		public Integer getCalories() {
-			return calories;
-		}
+ 	public Double getProtein() {
+ 		return protein;
+ 	}
 
-		public void setCalories(Integer calories) {
-			this.calories = calories;
-		}
+ 	public void setProtein(Double protein) {
+ 		this.protein = protein;
+ 	}
 
-		public String getProtein() {
-			return protein;
-		}
+ 	public Double getCarbohydrate() {
+ 		return carbohydrate;
+ 	}
 
-		public void setProtein(String protein) {
-			this.protein = protein;
-		}
+ 	public void setCarbohydrate(Double carbohydrate) {
+ 		this.carbohydrate = carbohydrate;
+ 	}
 
-		public String getCarbohydrate() {
-			return carbohydrate;
-		}
+ 	public Double getSugars() {
+ 		return sugars;
+ 	}
 
-		public void setCarbohydrate(String carbohydrate) {
-			this.carbohydrate = carbohydrate;
-		}
+ 	public void setSugars(Double sugars) {
+ 		this.sugars = sugars;
+ 	}
 
-		public String getSugars() {
-			return sugars;
-		}
+ 	public Double getFat() {
+ 		return fat;
+ 	}
 
-		public void setSugars(String sugars) {
-			this.sugars = sugars;
-		}
+ 	public void setFat(Double fat) {
+ 		this.fat = fat;
+ 	}
 
-		public String getFat() {
-			return fat;
-		}
+ 	public Double getSaturates() {
+ 		return saturates;
+ 	}
 
-		public void setFat(String fat) {
-			this.fat = fat;
-		}
+ 	public void setSaturates(Double saturates) {
+ 		this.saturates = saturates;
+ 	}
 
-		public String getSaturates() {
-			return saturates;
-		}
+ 	public Double getFibre() {
+ 		return fibre;
+ 	}
 
-		public void setSaturates(String saturates) {
-			this.saturates = saturates;
-		}
+ 	public void setFibre(Double fibre) {
+ 		this.fibre = fibre;
+ 	}
 
-		public String getFibre() {
-			return fibre;
-		}
+ 	public String getSodium() {
+ 		return sodium;
+ 	}
 
-		public void setFibre(String fibre) {
-			this.fibre = fibre;
-		}
+ 	public void setSodium(String sodium) {
+ 		this.sodium = sodium;
+ 	}
 
-		public String getSodium() {
-			return sodium;
-		}
+ 	public String getSalt() {
+ 		return salt;
+ 	}
 
-		public void setSodium(String sodium) {
-			this.sodium = sodium;
-		}
+ 	public void setSalt(String salt) {
+ 		this.salt = salt;
+ 	}
 
-		public String getSalt() {
-			return salt;
-		}
+ 	public Double getIron() {
+ 		return iron;
+ 	}
 
-		public void setSalt(String salt) {
-			this.salt = salt;
-		}
+ 	public void setIron(Double iron) {
+ 		this.iron = iron;
+ 	}
 
-		public String getIron() {
-			return iron;
-		}
-
-		public void setIron(String iron) {
-			this.iron = iron;
-		}
-
-
-
-		
-
-}//Class Passenger End
+}

@@ -1,0 +1,122 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<title th:text="${pageTitle}">Generic Page Title</title>
+</head>
+
+<body>
+	<nav th:replace="layouts/nav :: navFragment"></nav>
+	<div class="jumbotron text-center">
+		<h1 th:text="${title}">Edit</h1>
+		<br />
+	</div>
+
+	<div class="container">
+		<form class="form-horizontal" th:action="@{/passenger/save}" th:object="${passenger}" method="post">
+			<input type="hidden" th:field="${passenger.passengerId}" />
+
+
+			<div class="form-group">
+				<label class="col-md-2">Name</label> 
+				<input type="text" class="form-control" th:field="${passenger.name}" /> 
+				<span th:if="${#fields.hasErrors('name')}" th:errors="${passenger.name}" th:class="help-block">Name Errors</span>
+			</div>
+
+
+
+			<br />
+
+			<div class="form-group">
+				<label class="col-md-2">Name</label> 
+				<input type="text" class="form-control" th:field="${passenger.name}" /> 
+				<span th:if="${#fields.hasErrors('name')}" th:errors="${passenger.name}" th:class="help-block">Name Errors</span>
+			</div>
+
+
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Nutrition</th>
+						<th>Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					
+					
+														
+					
+					
+						<td>age</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.age}" /></td>
+					</tr>
+
+					<tr>
+						<td>cabin</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.cabin}" /></td>
+					</tr>
+
+					<tr>
+						<td>embarked</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.embarked}" /></td>
+					</tr>
+
+					<tr>
+						<td>fare</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.fare}" /></td>
+					</tr>
+
+					<tr>
+						<td>parch</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.parch}" /></td>
+					</tr>
+
+					<tr>
+						<td>pclass</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.pclass}" /></td>
+					</tr>
+
+					<tr>
+						<td>sex</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.sex}" /></td>
+					</tr>
+
+					<tr>
+						<td>sibsp</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.sibsp}" /></td>
+					</tr>
+
+					<tr>
+						<td>survived</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.survived}" /></td>
+					</tr>
+
+					<tr>
+						<td>ticket</td>
+						<td><input type="text" class="form-control"
+							th:field="${passenger.ticket}" /></td>
+					</tr>
+
+				</tbody>
+			</table>
+
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+</body>
+</html>

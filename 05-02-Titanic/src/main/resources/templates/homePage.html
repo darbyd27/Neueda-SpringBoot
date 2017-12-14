@@ -6,6 +6,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 		<title th:text="${pagetitle}">Generic Page Title</title>
+	
+	
+	
+	
+	
 	</head>
 	
 	<body>
@@ -14,10 +19,36 @@
 	
 		<div class="jumbotron text-center">
 			<h1>Titanic</h1>
-			<a class="btn btn-primary" href="/passenger/add" role="add">Add</a>
+			<a class="btn btn-primary" href="/passenger/edit" role="add">Add</a>
+			
+		
 		</div>
 		<br />
 			
+			<div class="container">
+			<form action="/passengers/search" method="Post" id="searchForm">
+			<select class="col-sm-2" form="searchForm" name="searchField">
+			
+					<option value="name">Name</option>
+					<option value="embarked">Embarked</option>
+					<option value="pclass">Class</option>
+			
+			
+			
+			
+			</select>
+			
+<input type="text" class="col-sm-6" name="searchString" form="searchForm"></input>
+
+<button type="submit" value="search" form="searchForm" class="btn btn-primary col-sm-2" Form="searchForm">Search</button>
+
+			
+			</form>
+			
+			</div>
+			
+		
+		
 		<div class="container">
 			<table class="table table-striped">
 				<thead>
@@ -33,6 +64,8 @@
 					
 					<td>
 					<a class="btn btn-primary" href="#" th:href="@{passenger/view/} + ${passenger.passengerid}">View</a> 
+					<a class="btn btn-primary" href="#" th:href="@{passenger/edit/} + ${passenger.passengerid}">Edit</a>
+					<a class="btn btn-primary" href="#" th:href="@{passenger/delete/} + ${passenger.passengerid}">Delete</a>
 					
 					</td>
 					</tr>

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import uk.ac.belfastmet.titanic.domain.Passenger;
 import uk.ac.belfastmet.titanic.respository.PassengerRepository;
 
@@ -57,7 +56,7 @@ public class HomeController
 	}
 	
 	@GetMapping("/pasenger/delete/{passengerId}")
-	public String deletePassenger(@PathVariable("passengerId") Integer pasengerId)
+	public String deletePassenger(@PathVariable("passengerId") Integer passengerId)
 	{
 		passengerRepository.delete(passengerId);
 		return "redirect:/";

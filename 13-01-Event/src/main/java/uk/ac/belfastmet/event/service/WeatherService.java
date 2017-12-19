@@ -1,11 +1,12 @@
-package uk.ac.belfastmet.weather.service;
+package uk.ac.belfastmet.event.service;
 
 
 
 import org.springframework.web.client.RestTemplate;
-import org.springframework.stereotype.Service;
 
-import uk.ac.belfastmet.weather.domain.TodaysWeather;
+import uk.ac.belfastmet.event.domain.Data;
+
+import org.springframework.stereotype.Service;
 
 @Service
 public class WeatherService
@@ -27,10 +28,10 @@ public WeatherService(RestTemplate restTemplate)
 }
 
 
-public TodaysWeather getTodayWeather()
+public Data getTodayWeather()
 {
 	String todaysWeather = this.belfastWeatherUrl;
-	TodaysWeather todaysWeather = restTemplate.getForObject(todaysWeather, TodaysWeather.class);
+	Data todaysWeather = restTemplate.getForObject(todaysWeather, Data.class);
 	
 	return todaysWeather;
 }

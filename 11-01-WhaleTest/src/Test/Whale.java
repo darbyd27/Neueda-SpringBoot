@@ -56,15 +56,15 @@ public class Whale extends Animal
 	
 	
 	//Atlantic Method
-	public String ocean()
+	public void ocean()
 	
 	{
 		if (getMainOcean().equals("Atlantic"))
 		{
-			System.out.println("\t" + getMainOcean());
+			System.out.println("\t" + getName());
 		}
-		return mainOcean + weight;
-		}      
+	
+	}
 	  
 	        	  
 	

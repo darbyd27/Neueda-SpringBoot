@@ -43,4 +43,7 @@ public class TodaysWeather {
 	public String toString() {
 		return "TodaysWeather [location=" + location + ", weather=" + weather + "]";
 	}
+	
+	
+	
 }

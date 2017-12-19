@@ -48,4 +48,10 @@ public class Location {
 		return "Location [name=" + name + ", latitude=" + latitude + ", longitude=" + longitude + "]";
 	}
 	
+	
+	
+	
+	
+	
+	
 }

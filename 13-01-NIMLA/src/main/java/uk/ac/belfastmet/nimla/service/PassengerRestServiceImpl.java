@@ -1,4 +1,4 @@
-package uk.ac.belfastmet.weather.service;
+package uk.ac.belfastmet.nimla.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

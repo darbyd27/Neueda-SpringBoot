@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-
 <head>
+
+    <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+	
+	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-	<title th:text="${pagetitle}">Generic Page Title</title>
+	<!-- Custom Styles  -->
+
+<title th:text="${pageTitle}">Generic Page Title</title>
 </head>
 
 <body>
-	<div class="jumbotron text-center">
-		<h1>Form Example</h1><br />
-	</div>
+<nav th:replace="layouts/nav :: navFragment">
+</nav>
+<div class="jumbotron text-center">
 
-	<div class="container">
-		<p th:text="${'Hello, ' + firstName + ' ' + LastName}">Result Page</p>
-	</div>
+<h1 th:text="${pageTitle}"></h1>
+<h6></h6>
+<br />
+
+</div>
+
+
+<div class="container">
+
+<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Weather Attribute</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Description</td>
+					<td th:text="${weather.description}"></td>
+				</tr>
+				<tr>
+					<td>Precipitation</td>
+					<td th:text="${weather.precipitation}"></td>
+				</tr>
+				<tr>
+					<td>temperature</td>
+					<td th:text="${weather.temperature}"></td>
+				</tr>
+				<tr>
+					<td>humidity</td>
+					<td th:text="${weather.humidity}"></td>
+				</tr>
+				<tr>
+					<td>pressure</td>
+					<td th:text="${weather.pressure}"></td>
+				</tr>
+				<tr>
+					<td>cloud cover</td>
+					<td th:text="${weather.cloudcover}"></td>
+				</tr>
+				<tr>
+					<td>wind speed</td>
+					<td th:text="${weather.wind.speed}"></td>
+				</tr>
+				<tr>
+					<td>wind direction</td>
+					<td th:text="${weather.wind.direction}"></td>
+				</tr>
+				<tr>
+					<td>image</td>
+					<td><img src="" th:src="${weather.image}" /></td>
+				</tr>
+			</tbody>
+		</table>
+
+</div>
 
 </body>
-
 </html>

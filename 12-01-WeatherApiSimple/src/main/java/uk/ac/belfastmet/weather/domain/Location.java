@@ -1,57 +1,57 @@
 package uk.ac.belfastmet.weather.domain;
 
-public class Location {
-	
+public class Location
+{
 	private String name; 
 	private Float latitude;
 	private Float longitude;
 	
-
-
-	public Location() {
+	public Location()
+	{
 		super();
 	}
 
-	public Location(String name, Float latitude, Float longitude) {
+	public Location(String name, Float latitude, Float longitude)
+	{
 		super();
 		this.name = name;
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
 
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name)
+	{
 		this.name = name;
 	}
 
-	public Float getLatitude() {
+	public Float getLatitude()
+	{
 		return latitude;
 	}
 
-	public void setLatitude(Float latitude) {
+	public void setLatitude(Float latitude)
+	{
 		this.latitude = latitude;
 	}
 
-	public Float getLongitude() {
+	public Float getLongitude()
+	{
 		return longitude;
 	}
 
-	public void setLongitude(Float longitude) {
+	public void setLongitude(Float longitude)
+	{
 		this.longitude = longitude;
 	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Location [name=" + name + ", latitude=" + latitude + ", longitude=" + longitude + "]";
-	}
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

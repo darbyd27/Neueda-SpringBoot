@@ -1,41 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-
-    <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-	
-	<!-- jQuery library -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-	<!-- Custom Styles  -->
-
-<title th:text="${pageTitle}">Generic Page Title</title>
+	<title th:text="${pageTitle}">Page Title</title>
 </head>
 
 <body>
-<nav th:replace="layouts/nav :: navFragment">
-</nav>
-<div class="jumbotron text-center">
+	<nav th:replace="layouts/nav :: navFragment">
+	</nav>
+	
+	<div class="jumbotron text-center">
+		<h1>Simple Weather API</h1>
+			<h6></h6>
+		<br />
+	</div>
 
-<h1>Simple Weather API</h1>
-<h6></h6>
-<br />
-
-</div>
-
-
-<div class="container">
-
-
-
- <a href="/belfast">Belfast Weather</a><br /><br />
- <a href="/dublin">Dublin Weather</a><br /><br />
- <a href="/belfast">London Weather</a>
- 
-</div>
+	<div class="container">
+		<a href="/belfast">Belfast Weather</a><br /><br />
+		<a href="/dublin">Dublin Weather</a><br /><br />
+		
+		<a href="/belfast">London Weather</a>
+		
+	</div>
 
 </body>
 </html>

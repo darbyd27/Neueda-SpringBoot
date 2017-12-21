@@ -1,15 +1,17 @@
 package Test;
 
-import java.util.ArrayList;
-
-
 
 public class Whale extends Animal
 {	
+	
 	private String mainOcean;
 	private int weight;
 	private int maxSpeed;
 	private int length;
+	
+	
+	
+	
 	
 	public Whale() {
 		super();
@@ -46,72 +48,40 @@ public class Whale extends Animal
 	public void setLength(int length) {
 		this.length = length;
 	}
-
 	
+	//Print Whale Details
 	@Override
 	public String toString() {
-		return "Whale - Ocean: " + mainOcean + ", Weight: " + weight + ", Speed: " + maxSpeed + ", Length: " + length + "\n";
+		return  getName() + " Whale -> " + "Ocean: " + mainOcean + ", Weight: " + weight + ", Speed: " + maxSpeed + ", Length: " + length;
 	}
-	
 	
 	
 	//Atlantic Method
 	public void ocean()
 	
 	{
-		if (getMainOcean().equals("Atlantic"))
-		{
-			System.out.println("\t" + getName());
-		}
-	
+			if (getMainOcean().equals("Atlantic"))
+			{
+				System.out.print("\n" + getName());
+			}
 	}
-	  
-	        	  
 	
-	
-	
-	
-	        	  
-//	        	  for(int i=0; i<whales.size(); i++)
-//		  	      {  
-//	        		  
-//	        		  String where = getMainOcean;
-//	        		  
-//	        		  if(where == "Atlantic")
-//	        		  {
-//	        			  System.out.println(whales[i]);
-//	        		  }
-//		  	      }
-	        	  
-	        	  
-	        	  
-	          
-	  	       
-	  	        
-	          
-		
-	
-	
-	//Speed method
-//	private int Average(ArrayList <Whale> whales) {
-//	      int sum = 0;
-//	      for (int i=0; i< whales.size(); i++) {
-//	            sum += i;
-//	      }
-//	      return sum / whales.size();
 
-   
-	    /* Method for getting the minimum value
-	    public static int getMin(int[] inputArray){ 
-	      int minValue = inputArray[0]; 
-	      
-	      for(int i=1;i<inputArray.length;i++){ 
-	        if(inputArray[i] < minValue){ 
-	          minValue = inputArray[i]; 
-	        } 
-	      } 
-	      return minValue;
-	      */
-	       
+	  
+	//Speed method
+	
+
+//Length Method
+public void longest()
+{
+	System.out.print("\n" + getLength());
 }
 
+//Weight Method
+public void heaviest()
+
+{
+	System.out.print("\n" + getWeight());
+}
+
+}
